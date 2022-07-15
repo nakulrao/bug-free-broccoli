@@ -10,7 +10,7 @@ resource "aws_launch_template" "ecs_ec2" {
   #image_id      = "ami-053d0f9f12656ea46"
   #instance_type = "t2.micro"
   instance_type = "t2.medium"
-  key_name      = "t_knp"
+  key_name      = "EC2Tutorial"
 
   user_data = data.template_cloudinit_config.user_data.rendered  # comes from user_data.tf
   iam_instance_profile {
