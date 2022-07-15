@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "knp-tf-state"
+    bucket = "knp-test-tf-state"
     key    = "laughing-doodle/terraform-assets/rds/terraform.tfstate"
     region = "ap-southeast-2" # Variables may not be used here.
 

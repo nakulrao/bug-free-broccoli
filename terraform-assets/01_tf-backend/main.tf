@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "knp-tf-state"
+  bucket = "knp-test-tf-state"
 
   lifecycle {
     prevent_destroy = true
@@ -58,10 +58,9 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 ## Uncomment the terraform block after you run step-1 from SUBMISSION.md
 
-/*
 terraform {
   backend "s3" {
-    bucket = "knp-tf-state"
+    bucket = "knp-test-tf-state"
     key    = "laughing-doodle/terraform-assets/tf-backend/terraform.tfstate"
     region = "ap-southeast-2" # Variables may not be used here.
 
@@ -69,4 +68,3 @@ terraform {
     encrypt        = true
   }
 }
-*/
